@@ -1,1 +1,44 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #a1dffb;
+  color: #c33124;
+}
 
+h1 {
+  color: #f98365;
+  font-weight: bolder;
+  font-size: 2em;
+  text-align: center;
+  border-bottom: 3px solid #f98365;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 10%;
+}
+
+.btn {
+  border: 2px solid #c33124;
+  text-align: center;
+  padding: 10px;
+  margin-left: 37%;
+  margin-right: 37%;
+}
+
+.btn:hover {
+  margin-left: 34%;
+  margin-right: 34%;
+  border: 3px solid white;
+  color: white;
+  font-size: 1.5em;
+}
+
+.btn:active {
+  color: #f98365;
+  border: 3px solid #f98365;
+}
+
+div h3 {
+  font-size: 1.8em;
+  font-weight: bolder;
+}

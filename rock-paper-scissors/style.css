@@ -1,20 +1,45 @@
 body {
   font-family: "Courier New", Courier, monospace;
   background-color: #a1dffb;
-  color: #c33124;
+  background: linear-gradient(to left, #a1dffb 50%, #f98365 50%);
+  color: white;
 }
 
 h1 {
-  color: #f98365;
+  color: white;
   font-weight: bolder;
   font-size: 2em;
   text-align: center;
-  border-bottom: 3px solid #f98365;
+  border-bottom: 3px solid white;
   padding-bottom: 30px;
   padding-top: 10px;
   width: 70%;
   margin: auto;
   margin-bottom: 10%;
+}
+
+.images {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.images img {
+  margin-top: 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.imgRock {
+  display: none;
+}
+
+.imgPaper {
+  display: none;
+}
+
+.imgScissors {
+  display: none;
 }
 
 .btn {
@@ -23,6 +48,7 @@ h1 {
   padding: 10px;
   margin-left: 37%;
   margin-right: 37%;
+  color: #c33124;
 }
 
 .btn:hover {
@@ -34,8 +60,8 @@ h1 {
 }
 
 .btn:active {
-  color: #f98365;
-  border: 3px solid #f98365;
+  color: black;
+  border: 3px solid black;
 }
 
 div h3 {
@@ -47,4 +73,5 @@ div h3 {
   font-size: 1.3em;
   text-align: center;
   margin-bottom: 5%;
+  color: white;
 }

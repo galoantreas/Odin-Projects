@@ -44,7 +44,7 @@ h1 {
 }
 
 #gameDiv {
-  width: 100%;
+  width: 52%;
   height: 100px;
   border: 5px solid black;
   display: table;
@@ -82,15 +82,9 @@ h1 {
   text-align: center;
 }
 
-/* .playerChoise {
-  border: 1px solid black;
-  width:50%;
+.imgage {
+  display: none;
 }
-.computerChoise {
-  border: 1px solid white;
-  width: 50%;
-} */
-
 .btn {
   border: 1px none black;
   width: 100%;

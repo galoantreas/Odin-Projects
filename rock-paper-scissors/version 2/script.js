@@ -67,7 +67,7 @@ function playRound(playerSelection,computerSelection) {
 
 
 
-    // a function that decites who wins
+    // a function that decides who wins
     function winLose(computer,player) {
         // write an if statment that says rock wins against scissors, scissors wins against paper, paper wins against rock and to give or take points
         if (computer == "rock" && player == "scissors") {
@@ -142,3 +142,6 @@ function AddEventOnBtn(a,b) {
 AddEventOnBtn(btnRock,btnRock);
 AddEventOnBtn(btnPaper,btnPaper);
 AddEventOnBtn(btnScissors,btnScissors);
+
+// make a function that shows the winer
+//make a function that shows the return from the if statment

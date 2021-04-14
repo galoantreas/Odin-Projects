@@ -17,12 +17,14 @@ const computerInput = dod(".computerInput");
 const playerInput = dod(".playerInput");
 let pointsPlayer = 0;
 let pointsComputer = 0;
-const playerImgRock = id("playerImgRock");
-const playerImgPaper = id("playerImgPaper");
-const playerImgScissors = id("playerImgScissors");
-const computerImgRock = id("computerImgRock");
-const computerImgPaper = id("computerImgPaper");
-const computerImgScissors = id("computerImgScissors");
+const playerH4Rock = id("playerH4Rock");
+const playerH4Paper = id("playerH4Paper");  
+const playerH4Scissors = id("playerH4Scissors");
+const computerH4Rock = id("computerH4Rock");
+const computerH4Paper = id("computerH4Paper");
+const computerH4Scissors = id("computerH4Scissors");
+let scorePlayer = dod(".scorePlayer");
+let scoreComputer = dod(".scoreComputer");
 
 // Make a function that returns radomly rock, paper, scissors
 let computerHand = [];
@@ -37,8 +39,13 @@ function computerPlay() {
 
 // Make a function that turns all the display to none for the img
 function turnAllImgDisplayToNone() {
-    image.style.display = "none";
+    playerH4Rock.firstElementChild.style.display = "none";
+    playerH4Paper.firstElementChild.style.display = "none";
+    playerH4Scissors.firstElementChild.style.display = "none";
     
+    computerH4Rock.firstElementChild.style.display = "none";
+    computerH4Paper.firstElementChild.style.display = "none";
+    computerH4Scissors.firstElementChild.style.display = "none";
 }
 
 
@@ -46,31 +53,23 @@ function turnAllImgDisplayToNone() {
 function playRound(playerSelection,computerSelection) {
     // Take the parameters in to variables and make them case insensitive
     let computer = computerSelection;
-    console.log(computer);
     let playerRaw = playerSelection ;
     let player = playerRaw.toLowerCase();
-    console.log(player);
-    
+
     turnAllImgDisplayToNone();
-    // make an if statment that chose the correct photo to display
-        if (computer == "rock") {
-            return computerImgRock.style.display = "inhert";
-        } else if (computer == "paper") {
-            return computerImgPaper.style.display = "inhert";
-        } else if (computer == "scissors") {
-            return computerImgScissors.style.display = "inhert";
-        }
+    playerDisplayPhotos(player);
+    computerDisplayPhotos(computer);
+    winLose(computer,player)
+    displayScore(pointsPlayer,pointsComputer);
+    console.log(pointsPlayer);
+    }
 
 
-        if (player == "rock") {
-            return playerImgRock.style.display = "inhert";
-        } else if (player == "paper") {
-            return playerImgPaper.style.display = "inhert";
-        } else if (player == "scissors") {
-            return playerImgScissors.style.display = "inhert";
-        }
 
-    // write an if statment that says rock wins against scissors, scissors wins against paper, paper wins against rock and to give or take points
+
+    // a function that decites who wins
+    function winLose(computer,player) {
+        // write an if statment that says rock wins against scissors, scissors wins against paper, paper wins against rock and to give or take points
         if (computer == "rock" && player == "scissors") {
             pointsPlayer--,pointsComputer++;
             return "You Lose! Rock beats Scissor";
@@ -95,15 +94,10 @@ function playRound(playerSelection,computerSelection) {
             return "Draw!";
         } else if (computer == "scissors" && player == "scissors") {
             return "Draw!";
-        } else {
-            return "Nothing";
         }
+        console.log( "hello")
     }
 
-    // make an if statment that chose the correct photo to display
-    function displayCorrectImg() {
-
-    }
 
     // Make a function that adds an event listener to the btn and plays (playRound)
 function AddEventOnBtn(a,b) {
@@ -112,5 +106,39 @@ function AddEventOnBtn(a,b) {
         
     })
 }
+    function playerDisplayPhotos(playerChoise) {
+         // make an if statment that chose the correct photo to display
+        if (playerChoise == "rock") {
+                return playerH4Rock.firstElementChild.style.display = "inherit";
+            } else if (playerChoise == "paper") {
+                return playerH4Paper.firstElementChild.style.display = "inherit";
+            } else if (playerChoise == "scissors") {
+                return playerH4Scissors.firstElementChild.style.display = "inherit";
+            }
+    }
 
-AddEventOnBtn(btnRock,btnRock)
+    function computerDisplayPhotos(computerChoise)  {     
+        // make an if statment that chose the correct photo to display
+        if (computerChoise == "rock") {
+            return computerH4Rock.firstElementChild.style.display = "inherit";
+        } else if (computerChoise == "paper") {
+            return computerH4Paper.firstElementChild.style.display = "inherit";
+        } else if (computerChoise == "scissors") {
+            return computerH4Scissors.firstElementChild.style.display = "inherit";
+        }
+    }
+
+    // make a function that takes the points of the players and displays it 
+    function displayScore( Player,Computer) {
+        scorePlayer.innerText =   Player;
+        scoreComputer.innerText = Computer;
+    }
+
+    
+
+
+
+
+AddEventOnBtn(btnRock,btnRock);
+AddEventOnBtn(btnPaper,btnPaper);
+AddEventOnBtn(btnScissors,btnScissors);

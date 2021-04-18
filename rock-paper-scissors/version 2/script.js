@@ -71,22 +71,22 @@ let result = id("divDisplayResult");
 function winLose(computer, player) {
     // write an if statment that says rock wins against scissors, scissors wins against paper, paper wins against rock and to give or take points
     if (computer == "rock" && player == "scissors") {
-        pointsPlayer--, pointsComputer++;
+        pointsComputer++;
         return result.innerText = "You Lose! Rock beats Scissor";
     } else if (computer == "scissors" && player == "rock") {
-        pointsPlayer++, pointsComputer--;
+        pointsPlayer++;
         return result.innerText = "You Win! Rock beats Scissor";
     } else if (computer == "scissors" && player == "paper") {
-        pointsPlayer--, pointsComputer++;
+        pointsComputer++;
         return result.innerText = "You Lose! Scissor beats Paper";
     } else if (computer == "paper" && player == "scissors") {
-        pointsPlayer++, pointsComputer--;
+        pointsPlayer++;
         return result.innerText = "You Win! Scissor beats Paper";
     } else if (computer == "paper" && player == "rock") {
-        pointsPlayer--, pointsComputer++;
+        pointsComputer++;
         return result.innerText = "You Lose! Paper beats Rock";
     } else if (computer == "rock" && player == "paper") {
-        pointsPlayer++, pointsComputer--;
+        pointsPlayer++;
         return result.innerText = "You Win! Paper beats Rock";
     } else if (computer == "rock" && player == "rock") {
         return result.innerText = "Draw!";

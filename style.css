@@ -113,6 +113,8 @@ h1 {
   font-family: "Courier New", Courier, monospace;
   border: 2px solid white;
   padding: 3px;
+  cursor: pointer;
+  user-select: none;
 }
 
 #btnRow h3:hover {
@@ -167,6 +169,8 @@ img {
   font-size: 1.3em;
   background-color: black;
   color: white;
+  cursor: pointer;
+  user-select: none;
 }
 
 #youWon button:hover,
